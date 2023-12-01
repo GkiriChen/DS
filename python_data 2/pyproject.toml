@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "python-data-package"
+version = "0.1.0"
+description = "Basic package for the Python Data Course"
+
+license = "<insert-your-licence>"
+
+authors = [
+    "<insert-your-name> <insert-your-email>"
+]
+
+repository = "https://github.com/python-poetry/poetry"
+homepage = "https://python-poetry.org"
+
+# README file(s) are used as the package description
+readme = ["README.md"]
+
+# Keywords (translated to tags on the package index)
+keywords = ["packaging", "poetry"]
+
+[tool.poetry.dependencies]
+# Compatible Python versions
+python = ">=3.10"
+# Standard dependency with semver constraints
+jupyter = ">=1.0.0"
+pandas = "*"
+tqdm = "*"
+matplotlib = "*"
+scikit-learn = "*"
+manim = "*"
+
+# Dependency groups are supported for organizing your dependencies
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.2"
+pytest-cov = "^3.0"
+
+# Python-style entrypoints and scripts are easily expressed
+[tool.poetry.scripts]
+start = "src:main"
